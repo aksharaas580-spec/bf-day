@@ -1,0 +1,524 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For My Kichaaaa ♡</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating decorations -->
+    <div id="hearts-container"></div>
+
+
+    <!-- ================= PASSWORD SCREEN ================= -->
+
+    <section id="lock-screen" class="screen active">
+
+        <div class="cat cat-one">🐱</div>
+        <div class="cat cat-two">🐱</div>
+
+        <div class="pink-glow"></div>
+
+        <div class="lock-content">
+
+            <div class="lock-cat">
+                🐱
+                <span>♡</span>
+            </div>
+
+            <p class="small-text">
+                PRIVATE • JUST FOR YOU
+            </p>
+
+            <h1>
+                Hey<br>
+                <span>Kichaaaa</span> ♡
+            </h1>
+
+            <p class="lock-description">
+                There's a little something waiting for you...
+            </p>
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter the secret password"
+                    maxlength="8"
+                    onkeydown="handleEnter(event)"
+                >
+
+                <button onclick="checkPassword()">
+                    Unlock ♡
+                </button>
+
+            </div>
+
+            <p id="wrong-password"></p>
+
+            <p class="hint">
+                hint: you already know it ;)
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= OPENING ================= -->
+
+    <section id="opening" class="screen">
+
+        <div class="corner-cat top-left">🐱</div>
+        <div class="corner-cat bottom-right">🐱</div>
+
+        <div class="pink-glow"></div>
+
+        <div class="opening-content">
+
+            <p class="small-text">
+                A LITTLE SOMETHING...
+            </p>
+
+            <h1>
+                For My<br>
+                <span>Kichaaaa</span> ♡
+            </h1>
+
+            <p class="opening-subtitle">
+                I made this just for you.
+            </p>
+
+            <div class="cute-cat">
+                🐱
+                <div class="cat-heart">♡</div>
+            </div>
+
+            <button class="heart-button" onclick="startWebsite()">
+                ♡ &nbsp; Tap to open
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTRO ================= -->
+
+    <section id="intro" class="screen">
+
+        <div class="corner-cat top-right">🐱</div>
+
+        <div class="content">
+
+            <p class="eyebrow">
+                HEY YOU ♡
+            </p>
+
+            <h2>
+                Somehow...
+                <br>
+                you became my favourite person.
+            </h2>
+
+            <p class="description">
+                And I still don't know how it happened so quickly.
+                But I'm really glad it did. ♡
+            </p>
+
+            <div class="tiny-cat">
+                🐱
+            </div>
+
+            <button class="next-btn" onclick="showSection('story')">
+                Continue <span>♡</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STORY ================= -->
+
+    <section id="story" class="screen">
+
+        <div class="content wide">
+
+            <p class="eyebrow">
+                OUR LITTLE WORLD
+            </p>
+
+            <h2>
+                It's the little things
+                <br>
+                I remember most.
+            </h2>
+
+            <div class="memory-grid">
+
+                <div class="memory-card">
+                    <div class="memory-icon">🌊</div>
+                    <h3>Kovalam</h3>
+                    <p>
+                        Our first date after you told me you loved me.
+                    </p>
+                    <span class="card-cat">🐱</span>
+                </div>
+
+                <div class="memory-card">
+                    <div class="memory-icon">🏖️</div>
+                    <h3>St. Andrews</h3>
+                    <p>
+                        Just us, the beach and a beautiful memory.
+                    </p>
+                    <span class="card-cat">♡</span>
+                </div>
+
+                <div class="memory-card">
+                    <div class="memory-icon">🌅</div>
+                    <h3>Shangumugham</h3>
+                    <p>
+                        Another place that became special because of you.
+                    </p>
+                    <span class="card-cat">🐱</span>
+                </div>
+
+                <div class="memory-card">
+                    <div class="memory-icon">🍛</div>
+                    <h3>Biriyani Dates</h3>
+                    <p>
+                        Because food somehow tastes better with you.
+                    </p>
+                    <span class="card-cat">♡</span>
+                </div>
+
+                <div class="memory-card">
+                    <div class="memory-icon">☕</div>
+                    <h3>Cold Coffees</h3>
+                    <p>
+                        Little drinks, random talks and lots of memories.
+                    </p>
+                    <span class="card-cat">🐱</span>
+                </div>
+
+                <div class="memory-card">
+                    <div class="memory-icon">🏛️</div>
+                    <h3>Museum Days</h3>
+                    <p>
+                        Simply spending time together is enough for me.
+                    </p>
+                    <span class="card-cat">♡</span>
+                </div>
+
+            </div>
+
+            <button class="next-btn" onclick="showSection('gallery')">
+                There's more... ♡
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GALLERY ================= -->
+
+    <section id="gallery" class="screen">
+
+        <div class="content wide">
+
+            <p class="eyebrow">
+                A FEW OF MY FAVOURITE MOMENTS
+            </p>
+
+            <h2>
+                Six pictures.
+                <br>
+                A million memories. ♡
+            </h2>
+
+            <div class="gallery">
+
+                <div class="photo-card">
+                    <img src="images/photo1.jpg" alt="Our memory">
+                    <div class="photo-caption">
+                        Just us ♡
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/photo2.jpg" alt="Our memory">
+                    <div class="photo-caption">
+                        One of my favourite moments
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/photo3.jpg" alt="Our memory">
+                    <div class="photo-caption">
+                        You + me 🐱
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/photo4.jpg" alt="Our memory">
+                    <div class="photo-caption">
+                        A memory I'll keep forever
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/photo5.jpg" alt="Our memory">
+                    <div class="photo-caption">
+                        My favourite person ♡
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/photo6.jpg" alt="Our memory">
+                    <div class="photo-caption">
+                        More memories to come...
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="next-btn" onclick="showSection('reasons')">
+                One more thing... ♡
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= REASONS ================= -->
+
+    <section id="reasons" class="screen">
+
+        <div class="content">
+
+            <div class="reason-cat">
+                🐱
+            </div>
+
+            <p class="eyebrow">
+                THE QUESTION
+            </p>
+
+            <h2>
+                What do I love about you?
+            </h2>
+
+            <div class="reason-box">
+
+                <div class="big-heart">
+                    ♡
+                </div>
+
+                <p id="reason-text">
+                    Everything about you.
+                </p>
+
+                <button class="small-btn" onclick="changeReason()">
+                    Tell me more ♡
+                </button>
+
+            </div>
+
+            <button class="next-btn" onclick="showSection('letter')">
+                I have something to tell you ♡
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LETTER ================= -->
+
+    <section id="letter" class="screen">
+
+        <div class="letter-wrapper">
+
+            <div class="letter-cat">
+                🐱
+            </div>
+
+            <div class="letter">
+
+                <div class="letter-top">
+                    <span>♡</span>
+                    <span>For Kichaaaa</span>
+                    <span>♡</span>
+                </div>
+
+                <h2>
+                    Dear Kicha,
+                </h2>
+
+                <p>
+                    Thank you for being with me and for becoming such a
+                    special part of my life.
+                </p>
+
+                <p>
+                    Honestly, I don't even know how I got attached to you
+                    so fast, but somehow you became someone I can't imagine
+                    my days without. And I love you so, so much.
+                </p>
+
+                <p>
+                    I never knew I had this soft and sweet side of me until
+                    you came into my life. With you, I feel like I can be
+                    completely myself.
+                </p>
+
+                <p>
+                    I can be silly, annoying, quiet, emotional, weird...
+                    literally just me, and you still stay.
+                    Thank you for letting me be who I am without judging me.
+                </p>
+
+                <p>
+                    I love all the little things we do together.
+                    Our first date after you told me you loved me,
+                    going to Kovalam, St. Andrews Beach and Shangumugham,
+                    eating biriyani together, getting cold coffees,
+                    spending time at the museum...
+                </p>
+
+                <p>
+                    These might seem like simple moments, but they mean so
+                    much to me because I got to experience them with you.
+                </p>
+
+                <p>
+                    And honestly, I miss you so badly whenever I have to
+                    leave after spending time with you.
+                    Every time we say goodbye, a part of me just wants
+                    a little more time with you.
+                </p>
+
+                <p>
+                    Thank you for all the little things you do, for listening
+                    to me, for making me laugh and, most importantly,
+                    for making me feel loved.
+                </p>
+
+                <p>
+                    I don't know what the future holds for us, but I know
+                    that I want to make many more memories with you.
+                    More random dates, more food, more cold coffees,
+                    more silly conversations, more photos and just
+                    more time with you.
+                </p>
+
+                <p>
+                    You have become my comfort, my favourite person,
+                    and one of the happiest parts of my life.
+                </p>
+
+                <p>
+                    So, Kichaaaa...
+                    thank you for choosing me, for understanding me,
+                    and for loving me the way you do.
+                </p>
+
+                <p class="love-line">
+                    I love you so much. ♡
+                </p>
+
+                <div class="signature">
+                    Love,<br>
+                    Your favourite person ♡
+                </div>
+
+            </div>
+
+            <button class="next-btn" onclick="showSection('final')">
+                One last surprise... 🎁
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FINAL ================= -->
+
+    <section id="final" class="screen">
+
+        <div class="final-cat">
+            🐱
+            <div>♡</div>
+        </div>
+
+        <div class="final-content">
+
+            <div class="gift" onclick="openGift()">
+
+                <div class="gift-lid"></div>
+                <div class="gift-box"></div>
+                <div class="gift-ribbon"></div>
+
+            </div>
+
+            <p id="gift-text" class="gift-text">
+                Tap the gift 🎁
+            </p>
+
+            <div id="final-message" class="hidden">
+
+                <div class="final-heart">
+                    ♡
+                </div>
+
+                <p class="eyebrow">
+                    HAPPY BOYFRIEND'S DAY
+                </p>
+
+                <h1>
+                    I love you,
+                    <span>Kichaaaa.</span>
+                </h1>
+
+                <p>
+                    And here's to all the memories
+                    we haven't made yet. 🐱♡
+                </p>
+
+                <div class="infinity">
+                    ∞
+                </div>
+
+                <p class="tiny">
+                    Always you.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
